@@ -1,0 +1,39 @@
+{
+	"name": "ilhooq/piko-project",
+	"description": "Skeletton for a Piko based project.",
+	"keywords": [
+		"yii2",
+		"project",
+		"piko",
+		"micro-framework"
+	],
+	"type": "project",
+	"license": "MIT",
+	"require": {
+		"bower-asset/jquery": "3.3.*@stable",
+		"bower-asset/bootstrap": "3.4.*",
+		"ilhooq/piko": "^0.1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"app\\": ""
+		}
+	},
+	"config": {
+		"fxp-asset": {
+			"installer-paths": {
+				"bower-asset-library": "web/assets"
+			},
+			"ignore-files": {
+				"bower-asset/bootstrap": [
+					"!dist",
+					"*"
+				],
+				"bower-asset/jquery": [
+					"!dist",
+					"*"
+				]
+			}
+		}
+	}
+}
