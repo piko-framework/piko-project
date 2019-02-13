@@ -82,7 +82,7 @@ $user = Piko::get('user');
   <script src="<?= Piko::getAlias('@web/assets/bootstrap/dist/js/'.(getenv('PIKO_ENV') == 'dev' ? 'bootstrap.js' : 'bootstrap.min.js')) ?>"></script>
 
   <?= $this->endBody() ?>
-  <script type="text/javascript">
+  <script>
   $(document).ready(function() {
       // Add the active class in the main menu
       $('#mainmenu a[href="' + location.pathname + '"]').parent().addClass('active')
