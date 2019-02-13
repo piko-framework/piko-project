@@ -31,7 +31,7 @@ $user = Piko::get('user');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?= Piko::getAlias('@web/') ?>">My Application</a>
+          <a class="navbar-brand" href="<?= Piko::getAlias('@web/') ?>">Your company</a>
         </div>
         <div id="mainmenu" class="collapse navbar-collapse">
           <ul class="navbar-nav navbar-right nav">
