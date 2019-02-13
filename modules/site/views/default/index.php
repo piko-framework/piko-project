@@ -1,4 +1,9 @@
+<?php
 
+/* @var $this piko\View */
+
+$this->title = 'Home';
+?>
 <div class="site-index">
 
   <div class="jumbotron">
