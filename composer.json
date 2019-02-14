@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"require": {
 		"oomphinc/composer-installers-extender": "^1.1",
-		"ilhooq/piko": "^0.1.0",
+		"ilhooq/piko": "0.*",
 		"bower-asset/jquery": "3.3.*@stable",
 		"bower-asset/bootstrap": "3.4.*"
 	},
