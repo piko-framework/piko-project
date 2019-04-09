@@ -20,7 +20,7 @@ class DefaultController extends \piko\Controller
     public function contactAction()
     {
         $form = new ContactForm();
-        $message = [];
+        $message = '';
 
         if (!empty($_POST)) {
             // Honey pot detection
@@ -31,10 +31,7 @@ class DefaultController extends \piko\Controller
             $form->bind($_POST);
 
             if ($form->validate() && $form->sendMessage()) {
-                $message['success'] = 'Thank you for contacting us. We will respond to you as soon as possible.';
-            }
-            else {
-                $message['error'] = 'An error occured.';
+                $message = 'Thank you for contacting us. We will respond to you as soon as possible.';
             }
         }
 

@@ -2,5 +2,6 @@
 /.project
 /.settings
 /vendor/
+/node_modules/
 /composer.lock
 /web/assets/

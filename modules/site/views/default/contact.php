@@ -7,65 +7,42 @@
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 
+$errors = $form->getErrors();
 
 if (!empty($message)) {
-    if (isset($message['error'])) {
-
-        $message['danger'] = $message['error'] . '<br>' . implode('<br>', $form->getErrors());
-        unset($message['error']);
-    }
-
-    $this->params['message']= $message;
+    $this->params['message']['type'] = 'success';
+    $this->params['message']['content'] = $message;
+} elseif (!empty($errors)) {
+    $this->params['message']['type'] = 'danger';
+    $this->params['message']['content'] = 'Des erreurs ont eu lieu :<br>' . implode('<br>', $errors);
 }
-
-
 ?>
 <div class="site-contact">
 
-  <div class="row">
-    <div class="col-sm-offset-2 col-sm-8">
-      <h1><?= $this->title ?></h1>
-    </div>
-  </div>
-
+<h1><?= $this->title ?></h1>
 
 <?php if (empty($message) || isset($message['danger'])): ?>
-  <form action="" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded">
-    <div class="row">
-      <div class="col-sm-offset-2 col-sm-8">
-        <p>If you have business inquiries or other questions, please fill out the following form to contact us. Thank you. </p>
-        <hr>
+  <form action="" method="post">
+    <p>If you have business inquiries or other questions, please fill out the following form to contact us. Thank you. </p>
+    <div class="form-row mb-4">
+      <div class="col-md">
+        <input type="text" name="name" value="<?= $form->name ?>" class="form-control" placeholder="Name" required>
+      </div>
+      <div class="col-md">
+        <input type="email" name="email" value="<?= $form->email ?>" class="form-control" placeholder="Email" required>
       </div>
     </div>
+
     <div class="form-group">
-      <label for="inputName" class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-8">
-        <input type="text" name="name" value="<?= $form->name ?>" class="form-control" id="inputName" placeholder="Name" required="required">
-      </div>
+      <input type="text" name="subject" value="<?= $form->subject ?>" class="form-control" id="inputSubject" placeholder="Subject" required="required">
     </div>
     <div class="form-group">
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-8">
-        <input type="email" name="email" value="<?= $form->email ?>" class="form-control" id="inputEmail3" placeholder="Email" required="required">
-      </div>
+      <label for="inputMessage">Message</label>
+      <textarea  name="message" class="form-control" id="inputMessage" required="required" rows="5"><?= $form->message ?></textarea>
     </div>
     <div class="form-group">
-      <label for="inputSubject" class="col-sm-2 control-label">Subject</label>
-      <div class="col-sm-8">
-        <input type="text" name="subject" value="<?= $form->subject ?>" class="form-control" id="inputSubject" placeholder="Subject" required="required">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputMessage" class="col-sm-2 control-label">Subject</label>
-      <div class="col-sm-8">
-        <textarea  name="message" class="form-control" id="inputMessage" required="required" rows="5"><?= $form->message ?></textarea>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <input type="text" name="email_2" class="hidden" placeholder="Don't fill this field" >
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <input type="text" name="email_2" class="invisible" placeholder="Don't fill this field" >
     </div>
   </form>
 <?php endif ?>

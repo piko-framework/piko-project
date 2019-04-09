@@ -10,36 +10,11 @@
 	"type": "project",
 	"license": "MIT",
 	"require": {
-		"oomphinc/composer-installers-extender": "^1.1",
-		"ilhooq/piko": "0.*",
-		"bower-asset/jquery": "3.3.*@stable",
-		"bower-asset/bootstrap": "3.4.*"
+		"ilhooq/piko": "0.*"
 	},
 	"autoload": {
 		"psr-4": {
 			"app\\": ""
 		}
-	},
-	"config": {
-		"fxp-asset": {
-			"enabled": false
-		}
-	},
-	"extra": {
-		"installer-types": [
-			"bower-asset"
-		],
-		"installer-paths": {
-			"web/assets/{$name}/": [
-				"bower-asset/jquery",
-				"bower-asset/bootstrap"
-			]
-		}
-	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	]
+	}
 }

@@ -1,0 +1,108 @@
+$enable-responsive-font-sizes: true;
+$enable-rounded: false;
+
+$orange: #f4511e;
+$primary: $orange;
+
+$navbar-brand-font-size: 1.15rem;
+$navbar-brand-padding-y: 0.5rem;
+$navbar-padding-y: 0;
+$navbar-nav-link-padding-x: 1rem;
+$nav-link-padding-y: 1rem;
+$navbar-dark-brand-color: #fff;
+$navbar-dark-brand-hover-color: #fff;
+$navbar-dark-color: #fff;
+$navbar-dark-active-color: $primary;
+
+// Bootstrap required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$breadcrumb-bg: $gray-100;
+
+// Bootstrap optional
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+html, body {
+  height: 100%;
+}
+
+.wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -61px; // The negative margin corresponds to the footer's height
+  padding-top: 4.5rem;
+}
+
+.footer {
+  min-height: 60px;
+  background-color: $gray-100;
+  border-top: 1px solid $gray-200;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+.navbar {
+  letter-spacing: 4px;
+  .nav-link {
+    font-size: 13px;
+  }
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      @include hover-focus {
+        color: $navbar-dark-active-color;
+        background: $navbar-dark-hover-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+      background: $white;
+    }
+  }
+}
