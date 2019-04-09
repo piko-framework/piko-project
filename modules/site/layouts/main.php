@@ -1,6 +1,7 @@
 <?php
 /* @var $this \piko\View */
 /* @var $user \piko\User */
+/* @var $content string */
 
 use piko\Piko;
 
