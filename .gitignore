@@ -1,8 +1,5 @@
 /.buildpath
 /.project
 /.settings
-/vendor/
-/node_modules/
-/composer.lock
-/web/assets/
-/package-lock.json
+/vendor
+/web/assets

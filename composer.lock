@@ -1,0 +1,145 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "362b27876f73af107e8a880e8cf24a02",
+    "packages": [
+        {
+            "name": "bower-asset/bootstrap",
+            "version": "v4.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a716fb03f965dc0846df479e14388b1b4b93d7ce",
+                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+            },
+            "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/jquery",
+            "version": "3.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
+                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
+            },
+            "type": "bower-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "piko/framework",
+            "version": "v0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piko-framework/piko.git",
+                "reference": "15fe0360a7a5cde9d72492603bca26d084badde6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piko-framework/piko/zipball/15fe0360a7a5cde9d72492603bca26d084badde6",
+                "reference": "15fe0360a7a5cde9d72492603bca26d084badde6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "piko\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sylvain Philip",
+                    "homepage": "https://www.sphilip.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Ultra lighweight MVC web framework",
+            "homepage": "https://github.com/piko-framework/piko",
+            "keywords": [
+                "framework",
+                "micro",
+                "micro-framework",
+                "mvc"
+            ],
+            "support": {
+                "issues": "https://github.com/piko-framework/piko/issues",
+                "source": "https://github.com/piko-framework/piko/tree/v0.9"
+            },
+            "time": "2020-12-23T16:07:32+00:00"
+        },
+        {
+            "name": "piko/ui",
+            "version": "v0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piko-framework/ui.git",
+                "reference": "bb93f01691406e943d535bd346e8c928328ab491"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piko-framework/ui/zipball/bb93f01691406e943d535bd346e8c928328ab491",
+                "reference": "bb93f01691406e943d535bd346e8c928328ab491",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/bootstrap": "^4.4",
+                "bower-asset/jquery": "^3.4",
+                "piko/framework": "^0.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "piko\\ui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Provides JQuery and Bootstrap asset bundles for Piko based projects.",
+            "keywords": [
+                "bootstrap",
+                "piko",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/piko-framework/ui/issues",
+                "source": "https://github.com/piko-framework/ui/tree/v0.3"
+            },
+            "time": "2020-12-23T20:50:36+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

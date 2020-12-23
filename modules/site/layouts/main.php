@@ -3,6 +3,7 @@
 /* @var $content string */
 
 use piko\Piko;
+use piko\ui\BootstrapAsset;
 
 $app = Piko::$app;
 
@@ -11,6 +12,8 @@ $user = Piko::get('user');
 
 /* @var $router \piko\Router */
 $router = Piko::get('router');
+
+BootstrapAsset::register($this);
 ?>
 <!DOCTYPE html>
   <html lang="<?= $app->language ?>">
@@ -18,8 +21,8 @@ $router = Piko::get('router');
   <meta charset="<?= $app->charset ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $this->escape($this->title) ?></title>
-  <link href="<?= Piko::getAlias('@web/css/' . (getenv('PIKO_ENV') == 'dev' ? 'main.css?r=' . uniqid() : 'main.min.css')) ?>" rel="stylesheet">
   <?= $this->head() ?>
+  <link href="<?= Piko::getAlias('@web/css/site.css') ?>" rel="stylesheet">
 </head>
 <body>
   <nav id="mainnav" class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -80,8 +83,7 @@ $router = Piko::get('router');
     </div>
   </footer>
 
-  <script src="<?= Piko::getAlias('@web/js/'.(getenv('PIKO_ENV') == 'dev' ? 'main.js' : 'main.min.js')) ?>"></script>
-
   <?= $this->endBody() ?>
+  <script src="<?= Piko::getAlias('@web/js/site.js') ?>"></script>
 </body>
 </html>

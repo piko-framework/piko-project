@@ -1,6 +1,6 @@
 {
-	"name": "ilhooq/piko-project",
-	"description": "Skeletton for a Piko based project.",
+	"name": "piko/project",
+	"description": "Application skeletton for a Piko based project.",
 	"keywords": [
 		"yii2",
 		"project",
@@ -10,11 +10,17 @@
 	"type": "project",
 	"license": "MIT",
 	"require": {
-		"ilhooq/piko": "0.*"
+		"piko/framework": "^0.9",
+		"piko/ui": "^0.3"
 	},
 	"autoload": {
 		"psr-4": {
 			"app\\": ""
 		}
-	}
+	},
+	"repositories" : [{
+			"type" : "composer",
+			"url" : "https://asset-packagist.org"
+		}
+	]
 }

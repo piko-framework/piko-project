@@ -1,0 +1,93 @@
+html, body {
+	height: 100%;
+}
+
+a {
+	color: #f4511e;
+}
+
+.wrap {
+	min-height: 100%;
+	height: auto;
+	/* The negative margin corresponds to the footer's height */
+	margin: 0 auto -61px;
+	padding-top: 4.5rem;
+}
+
+.footer {
+	min-height: 60px;
+	background-color: #f8f9fa;
+	border-top: 1px solid #e9ecef;
+	padding-top: 1rem;
+	font-size: 0.9rem;
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+	border-radius: 0;
+}
+
+.btn-primary {
+	background-color: #f4511e;
+	border-color: #f4511e;
+}
+
+.btn-primary:hover {
+  background-color: #e13e0b;
+  border-color: #d53b0a;
+}
+
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
+
+.breadcrumb {
+	background-color: #f8f9fa;
+}
+
+.navbar {
+	letter-spacing: 4px;
+}
+
+.navbar .nav-link {
+	font-size: 13px;
+}
+
+.bg-primary {
+	background-color: #f4511e !important;
+}
+
+.navbar {
+	padding: 0 1rem;
+}
+
+.navbar-brand {
+	font-size: 1.15rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding: 1rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: #f4511e;
+	background: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+	color: #f4511e;
+	background: #fff;
+}
