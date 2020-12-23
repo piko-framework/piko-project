@@ -10,22 +10,26 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ```bash
-composer create-project ilhooq/piko-project yourproject
+composer create-project piko/project yourproject
 ```
 
-## Run
+## Run using the PHP built-in web server
 
 ```bash
 cd yourproject && php -S localhost:8080 -t web
 ```
 
-## Assets customization
-Javascrip and css are build with [Webpack](https://webpack.js.org/)
+## Environment file
 
-Edit `assets/js/main.js` and `assets/scss/site.css`
+There is a file named `.env` at the root of the project. This file contains some environment variables :
 
-To compile them :
-
-```bash
-npm -i && npm run build
 ```
+PIKO_DEBUG        = 1
+PIKO_ENV          = dev
+APP_TIMEZONE      = Europe/Paris
+APP_LANGUAGE      = fr
+ADMIN_EMAIL       = youremail@yourhost.com
+```
+
+Set `PIKO_DEBUG = 0` and `PIKO_ENV = prod` when your project is ready for production.
+
