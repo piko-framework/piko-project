@@ -4,71 +4,94 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "362b27876f73af107e8a880e8cf24a02",
+    "content-hash": "38d5ed2719ef200c614951ed9ba72f13",
     "packages": [
         {
-            "name": "bower-asset/bootstrap",
-            "version": "v4.5.3",
+            "name": "piko/core",
+            "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
+                "url": "https://github.com/piko-framework/core.git",
+                "reference": "f81468df57d0b31aab80f8693099d5364d37f8e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a716fb03f965dc0846df479e14388b1b4b93d7ce",
-                "reference": "a716fb03f965dc0846df479e14388b1b4b93d7ce"
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/jquery",
-            "version": "3.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
-                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/4c0e4becb8263bb5b3e6dadc448d8e7305ef8215",
-                "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "piko/framework",
-            "version": "v0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/piko-framework/piko.git",
-                "reference": "15fe0360a7a5cde9d72492603bca26d084badde6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/piko/zipball/15fe0360a7a5cde9d72492603bca26d084badde6",
-                "reference": "15fe0360a7a5cde9d72492603bca26d084badde6",
+                "url": "https://api.github.com/repos/piko-framework/core/zipball/f81468df57d0b31aab80f8693099d5364d37f8e7",
+                "reference": "f81468df57d0b31aab80f8693099d5364d37f8e7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.0"
+                "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^3.4"
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "piko\\": ""
+                    "piko\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-3.0"
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sylvain Philip",
+                    "homepage": "https://www.sphilip.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Piko framework base",
+            "homepage": "https://github.com/piko-framework/core",
+            "keywords": [
+                "framework",
+                "micro",
+                "micro-framework",
+                "mvc"
+            ],
+            "support": {
+                "issues": "https://github.com/piko-framework/core/issues",
+                "source": "https://github.com/piko-framework/core/tree/v1.0"
+            },
+            "time": "2021-09-24T16:06:16+00:00"
+        },
+        {
+            "name": "piko/framework",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piko-framework/piko.git",
+                "reference": "66a7ede8d7fccfdb4080367a5138f10f2c9b783e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piko-framework/piko/zipball/66a7ede8d7fccfdb4080367a5138f10f2c9b783e",
+                "reference": "66a7ede8d7fccfdb4080367a5138f10f2c9b783e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0",
+                "piko/core": "^1.0",
+                "piko/router": "^1.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "piko\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
             ],
             "authors": [
                 {
@@ -87,50 +110,117 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/piko/issues",
-                "source": "https://github.com/piko-framework/piko/tree/v0.9"
+                "source": "https://github.com/piko-framework/piko/tree/v1.0"
             },
-            "time": "2020-12-23T16:07:32+00:00"
+            "time": "2021-09-25T06:53:55+00:00"
         },
         {
-            "name": "piko/ui",
-            "version": "v0.3",
+            "name": "piko/router",
+            "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/piko-framework/ui.git",
-                "reference": "bb93f01691406e943d535bd346e8c928328ab491"
+                "url": "https://github.com/piko-framework/router.git",
+                "reference": "c1d572471fddbf020f0d9e1a362cbfea66e7f4cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/ui/zipball/bb93f01691406e943d535bd346e8c928328ab491",
-                "reference": "bb93f01691406e943d535bd346e8c928328ab491",
+                "url": "https://api.github.com/repos/piko-framework/router/zipball/c1d572471fddbf020f0d9e1a362cbfea66e7f4cf",
+                "reference": "c1d572471fddbf020f0d9e1a362cbfea66e7f4cf",
                 "shasum": ""
             },
             "require": {
-                "bower-asset/bootstrap": "^4.4",
-                "bower-asset/jquery": "^3.4",
-                "piko/framework": "^0.9"
+                "php": ">=7.1.0",
+                "piko/core": "^1.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "piko\\ui\\": ""
+                    "piko\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "LGPL-3.0-or-later"
             ],
-            "description": "Provides JQuery and Bootstrap asset bundles for Piko based projects.",
+            "authors": [
+                {
+                    "name": "Sylvain Philip",
+                    "homepage": "https://www.sphilip.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fast micro router used in Piko framework",
+            "homepage": "https://github.com/piko-framework/core",
             "keywords": [
-                "bootstrap",
-                "piko",
-                "ui"
+                "micro",
+                "micro-router",
+                "router"
             ],
             "support": {
-                "issues": "https://github.com/piko-framework/ui/issues",
-                "source": "https://github.com/piko-framework/ui/tree/v0.3"
+                "issues": "https://github.com/piko-framework/router/issues",
+                "source": "https://github.com/piko-framework/router/tree/v1.0"
             },
-            "time": "2020-12-23T20:50:36+00:00"
+            "time": "2021-09-24T19:31:44+00:00"
+        },
+        {
+            "name": "piko/user",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/piko-framework/user.git",
+                "reference": "4d9116050fbf35bbaebaf18b2e4bdd55253401d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/piko-framework/user/zipball/4d9116050fbf35bbaebaf18b2e4bdd55253401d1",
+                "reference": "4d9116050fbf35bbaebaf18b2e4bdd55253401d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0",
+                "piko/core": "^1.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "piko\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sylvain Philip",
+                    "homepage": "https://www.sphilip.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A lightweight user session manager to login/logout and retrieve user identity.",
+            "homepage": "https://github.com/piko-framework/user",
+            "keywords": [
+                "login",
+                "logout",
+                "piko",
+                "session",
+                "user"
+            ],
+            "support": {
+                "issues": "https://github.com/piko-framework/user/issues",
+                "source": "https://github.com/piko-framework/user/tree/v1.0"
+            },
+            "time": "2021-09-25T11:23:40+00:00"
         }
     ],
     "packages-dev": [],
