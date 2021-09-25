@@ -1,6 +1,6 @@
 # Piko basic project template
 
-Basic Skeletton to build a Piko based application
+Basic Skeletton to build a [Piko framework](https://piko-framework.github.io/) based application
 
 ## Install via composer
 
@@ -21,15 +21,15 @@ cd yourproject && php -S localhost:8080 -t web
 
 ## Environment file
 
-There is a file named `.env` at the root of the project. This file contains some environment variables :
+There is a file named `env.php` at the root of the project. This file contains some environment variables :
 
 ```
-PIKO_DEBUG        = 1
-PIKO_ENV          = dev
-APP_TIMEZONE      = Europe/Paris
-APP_LANGUAGE      = fr
-ADMIN_EMAIL       = youremail@yourhost.com
+[
+    'DEBUG' => '1',
+    'APP_ENV' => 'dev',
+    'APP_LANGUAGE' => 'en',
+    'SITE_EMAIL' => 'youremail@somehost.com',
+]
 ```
 
-Set `PIKO_DEBUG = 0` and `PIKO_ENV = prod` when your project is ready for production.
-
+Set `DEBUG = 0` and `APP_ENV = prod` when your project is ready for production.

@@ -6,6 +6,8 @@
 $message = $exception->getMessage() . ' (#' . $exception->getCode() . ')';
 
 $this->title = $message;
+
+$appEnv = $_ENV['APP_ENV'] ?? 'prod';
 ?>
 <div class="site-error">
 
@@ -22,7 +24,7 @@ $this->title = $message;
         Please contact us if you think this is a server error. Thank you.
     </p>
 
-    <?php if (getenv('PIKO_ENV') === 'dev'): ?>
+    <?php if ($appEnv === 'dev'): ?>
     <div class="panel panel-info">
       <div class="panel-heading">Trace:</div>
         <div class="panel-body">

@@ -10,7 +10,7 @@ $this->title = 'Home';
   <h1 class="display-3">Congratulations!</h1>
   <p class="lead">You have successfully created your Piko-powered application.</p>
   <p>
-    <a class="btn btn-lg btn-success" href="https://github.com/ilhooq/piko">Get started with Piko</a>
+    <a class="btn btn-lg btn-success" href="https://piko-framework.github.io/">Get started with Piko</a>
   </p>
 </div>
 

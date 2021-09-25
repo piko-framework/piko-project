@@ -23,14 +23,10 @@ class DefaultController extends \piko\Controller
         $message = '';
 
         if (!empty($_POST)) {
-            // Honey pot detection
-            if (!empty($_POST['email_2'])) {
-                exit();
-            }
 
             $form->bind($_POST);
 
-            if ($form->validate() && $form->sendMessage()) {
+            if ($form->isValid() && $form->sendMessage()) {
                 $message = 'Thank you for contacting us. We will respond to you as soon as possible.';
             }
         }
@@ -53,7 +49,7 @@ class DefaultController extends \piko\Controller
                 if ($userIdentity->validatePassword($_POST['password'])) {
                     $user = Piko::get('user');
                     $user->login($userIdentity);
-                    return Piko::$app->redirect('/');
+                    return $this->redirect($this->getUrl('site/default/index'));
                 }
                 $error = 'Auhtentication failed';
             } else {
@@ -68,7 +64,7 @@ class DefaultController extends \piko\Controller
     {
         $user = Piko::get('user');
         $user->logout();
-        Piko::$app->redirect('/');
+        $this->redirect($this->getUrl('site/default/index'));
     }
 
     public function errorAction()

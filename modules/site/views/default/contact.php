@@ -36,13 +36,14 @@ if (!empty($message)) {
     <div class="form-group">
       <input type="text" name="subject" value="<?= $form->subject ?>" class="form-control" id="inputSubject" placeholder="Subject" required="required">
     </div>
+
     <div class="form-group">
       <label for="inputMessage">Message</label>
       <textarea  name="message" class="form-control" id="inputMessage" required="required" rows="5"><?= $form->message ?></textarea>
     </div>
+
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Submit</button>
-      <input type="text" name="email_2" class="invisible" placeholder="Don't fill this field" >
     </div>
   </form>
 <?php endif ?>

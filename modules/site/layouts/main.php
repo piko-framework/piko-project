@@ -2,18 +2,14 @@
 /* @var $this \piko\View */
 /* @var $content string */
 
+use piko\Application;
 use piko\Piko;
-use piko\ui\BootstrapAsset;
 
-$app = Piko::$app;
+$app = Application::getInstance();
 
 /* @var $user \piko\User */
 $user = Piko::get('user');
 
-/* @var $router \piko\Router */
-$router = Piko::get('router');
-
-BootstrapAsset::register($this);
 ?>
 <!DOCTYPE html>
   <html lang="<?= $app->language ?>">
@@ -22,6 +18,9 @@ BootstrapAsset::register($this);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $this->escape($this->title) ?></title>
   <?= $this->head() ?>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
   <link href="<?= Piko::getAlias('@web/css/site.css') ?>" rel="stylesheet">
 </head>
 <body>
@@ -34,13 +33,13 @@ BootstrapAsset::register($this);
 
       <div id="mainmenu" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="<?= $router->getUrl('site/default/index') ?>">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="<?= $router->getUrl('site/default/about') ?>">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="<?= $router->getUrl('site/default/contact') ?>">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/index') ?>">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/about') ?>">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/contact') ?>">Contact</a></li>
           <?php if ($user->isGuest()): ?>
-          <li class="nav-item"><a class="nav-link" href="<?= $router->getUrl('site/default/login') ?>">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/login') ?>">Login</a></li>
           <?php else:?>
-          <li class="nav-item"><a class="nav-link" href="<?= $router->getUrl('site/default/logout') ?>">Logout (<?= $user->getIdentity()->username ?>)</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/logout') ?>">Logout (<?= $user->getIdentity()->username ?>)</a></li>
           <?php endif?>
         </ul>
       </div>
@@ -77,13 +76,19 @@ BootstrapAsset::register($this);
           &copy; Your Company <?= date('Y') ?>
         </div>
         <div class="col-sm text-right">
-          Powered by <a href="https://github.com/ilhooq/piko" rel="external">Piko Framework</a>
+          Powered by <a href="https://github.com/piko-framework/" rel="external">Piko Framework</a>
         </div>
       </div>
     </div>
   </footer>
 
   <?= $this->endBody() ?>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
   <script src="<?= Piko::getAlias('@web/js/site.js') ?>"></script>
 </body>
 </html>

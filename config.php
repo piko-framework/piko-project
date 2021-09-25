@@ -4,7 +4,7 @@ return [
     'defaultLayoutPath' => '@app/modules/site/layouts',
     'defaultLayout' => 'main',
     'errorRoute' => 'site/default/error',
-    'language' => getenv('APP_LANGUAGE'),
+    'language' => $_ENV['APP_LANGUAGE'] ?? 'en',
     'components' => [
         'router' => [
             'class' => 'piko\Router',

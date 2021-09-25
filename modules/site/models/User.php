@@ -5,7 +5,7 @@ use piko\IdentityInterface;
 use piko\Model;
 
 /**
- * This is the model class for table "user".
+ * This is the User identity class.
  *
  */
 class User extends Model implements IdentityInterface
@@ -29,12 +29,12 @@ class User extends Model implements IdentityInterface
 
     /**
      * @param string $username
-     * @return \app\modules\site\models\User|NULL
+     * @return User|NULL
      */
     public static function findByUsername($username)
     {
         foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
+            if ($user['username'] == $username) {
                 return new static($user);
             }
         }
@@ -49,7 +49,7 @@ class User extends Model implements IdentityInterface
 
     /**
      * @param int $id
-     * @return \app\modules\site\models\User|NULL
+     * @return User|null
      */
     public static function findIdentity($id)
     {
@@ -60,5 +60,4 @@ class User extends Model implements IdentityInterface
     {
         return $this->id;
     }
-
 }
