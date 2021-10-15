@@ -10,7 +10,7 @@
 	"type": "project",
 	"license": "MIT",
 	"require": {
-		"piko/framework": "^1.0",
+		"piko/framework": "^2.0",
 		"piko/user": "^1.0"
 	},
 	"autoload": {

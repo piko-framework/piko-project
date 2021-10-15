@@ -9,12 +9,12 @@ return [
         'router' => [
             'class' => 'piko\Router',
             'routes' => [
-                '^/$' => 'site/default/index',
-                '^/about$' => 'site/default/about',
-                '^/login$' => 'site/default/login',
-                '^/logout$' => 'site/default/logout',
-                '^/contact$' => 'site/default/contact',
-                '^/(\w+)/(\w+)/(\w+)' => '$1/$2/$3'
+                '/' => 'site/default/index',
+                '/about' => 'site/default/about',
+                '/login' => 'site/default/login',
+                '/logout' => 'site/default/logout',
+                '/contact' => 'site/default/contact',
+                '/:module/:controller/:action' => ':module/:controller/:action'
             ],
         ],
         'user' => [
