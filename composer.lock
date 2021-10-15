@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "38d5ed2719ef200c614951ed9ba72f13",
+    "content-hash": "561f211f468b42a24c22841db206eb6c",
     "packages": [
         {
             "name": "piko/core",
-            "version": "v1.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/core.git",
-                "reference": "f81468df57d0b31aab80f8693099d5364d37f8e7"
+                "reference": "d1abebf80a79fc6ec72375581edaa601c7ea4116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/core/zipball/f81468df57d0b31aab80f8693099d5364d37f8e7",
-                "reference": "f81468df57d0b31aab80f8693099d5364d37f8e7",
+                "url": "https://api.github.com/repos/piko-framework/core/zipball/d1abebf80a79fc6ec72375581edaa601c7ea4116",
+                "reference": "d1abebf80a79fc6ec72375581edaa601c7ea4116",
                 "shasum": ""
             },
             "require": {
@@ -55,28 +55,28 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/core/issues",
-                "source": "https://github.com/piko-framework/core/tree/v1.0"
+                "source": "https://github.com/piko-framework/core/tree/v1.1"
             },
-            "time": "2021-09-24T16:06:16+00:00"
+            "time": "2021-09-26T13:55:52+00:00"
         },
         {
             "name": "piko/framework",
-            "version": "v1.0",
+            "version": "v2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/piko.git",
-                "reference": "66a7ede8d7fccfdb4080367a5138f10f2c9b783e"
+                "reference": "33bad534bb298de9ea137e052bbd3afb291213b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/piko/zipball/66a7ede8d7fccfdb4080367a5138f10f2c9b783e",
-                "reference": "66a7ede8d7fccfdb4080367a5138f10f2c9b783e",
+                "url": "https://api.github.com/repos/piko-framework/piko/zipball/33bad534bb298de9ea137e052bbd3afb291213b5",
+                "reference": "33bad534bb298de9ea137e052bbd3afb291213b5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0",
                 "piko/core": "^1.0",
-                "piko/router": "^1.0"
+                "piko/router": "^2.0"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.99",
@@ -110,22 +110,22 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/piko/issues",
-                "source": "https://github.com/piko-framework/piko/tree/v1.0"
+                "source": "https://github.com/piko-framework/piko/tree/v2.0"
             },
-            "time": "2021-09-25T06:53:55+00:00"
+            "time": "2021-10-15T06:38:19+00:00"
         },
         {
             "name": "piko/router",
-            "version": "v1.0",
+            "version": "v2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/router.git",
-                "reference": "c1d572471fddbf020f0d9e1a362cbfea66e7f4cf"
+                "reference": "a894bd16c72a6dc88578d0900e5cafe41e6e04cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/router/zipball/c1d572471fddbf020f0d9e1a362cbfea66e7f4cf",
-                "reference": "c1d572471fddbf020f0d9e1a362cbfea66e7f4cf",
+                "url": "https://api.github.com/repos/piko-framework/router/zipball/a894bd16c72a6dc88578d0900e5cafe41e6e04cc",
+                "reference": "a894bd16c72a6dc88578d0900e5cafe41e6e04cc",
                 "shasum": ""
             },
             "require": {
@@ -133,14 +133,19 @@
                 "piko/core": "^1.0"
             },
             "require-dev": {
+                "nikic/fast-route": "^1.3",
+                "phpbench/phpbench": "^1.1",
                 "phpstan/phpstan": "^0.12.99",
                 "phpunit/phpunit": "^9.5",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.5",
+                "symfony/config": "^5.3",
+                "symfony/routing": "^5.3"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "piko\\": "src"
+                    "piko\\": "src",
+                    "bench\\": "benchmark"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -155,7 +160,7 @@
                 }
             ],
             "description": "A fast micro router used in Piko framework",
-            "homepage": "https://github.com/piko-framework/core",
+            "homepage": "https://github.com/piko-framework/router",
             "keywords": [
                 "micro",
                 "micro-router",
@@ -163,9 +168,9 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/router/issues",
-                "source": "https://github.com/piko-framework/router/tree/v1.0"
+                "source": "https://github.com/piko-framework/router/tree/v2.1"
             },
-            "time": "2021-09-24T19:31:44+00:00"
+            "time": "2021-10-14T07:00:04+00:00"
         },
         {
             "name": "piko/user",
