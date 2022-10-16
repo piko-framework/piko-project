@@ -1,4 +1,7 @@
-$(function() {
-    // Add the active class in the main menu
-    $('#mainmenu a[href="' + location.pathname + '"]').parent().addClass('active')
+window.addEventListener("DOMContentLoaded", function(event) {
+    const activeLink = document.querySelector('#mainmenu a[href="' + location.pathname + '"]');
+
+    if (activeLink) {
+        activeLink.parentNode.classList.add('active');
+    }
 });

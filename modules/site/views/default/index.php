@@ -6,15 +6,13 @@ $this->title = 'Home';
 ?>
 
 
-<div class="jumbotron text-center bg-transparent">
+<div class="py-5 text-center bg-transparent">
   <h1 class="display-3">Congratulations!</h1>
   <p class="lead">You have successfully created your Piko-powered application.</p>
   <p>
     <a class="btn btn-lg btn-success" href="https://piko-framework.github.io/">Get started with Piko</a>
   </p>
 </div>
-
-
 
 <div class="row">
   <div class="col-lg-4">

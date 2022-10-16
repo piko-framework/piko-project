@@ -18,8 +18,8 @@ $user = Piko::get('user');
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $this->escape($this->title) ?></title>
   <?= $this->head() ?>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
         crossorigin="anonymous">
   <link href="<?= Piko::getAlias('@web/css/site.css') ?>" rel="stylesheet">
 </head>
@@ -32,7 +32,7 @@ $user = Piko::get('user');
       </button>
 
       <div id="mainmenu" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/index') ?>">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/about') ?>">About</a></li>
           <li class="nav-item"><a class="nav-link" href="<?= $this->getUrl('site/default/contact') ?>">Contact</a></li>
@@ -50,7 +50,7 @@ $user = Piko::get('user');
     <div class="container">
 
      <?php if (isset($this->params['breadcrumbs'])): $count = count($this->params['breadcrumbs']) ?>
-      <ol class="breadcrumb">
+      <ol class="breadcrumb p-2">
         <li class="breadcrumb-item"><a href="<?= Piko::getAlias('@web/') ?>">Home</a></li>
       <?php foreach ($this->params['breadcrumbs'] as $k => $breadcrumb): ?>
         <li class="breadcrumb-item<?= ($count == $k+1) ? ' active' : '' ?>"><?= $breadcrumb ?></li>
@@ -83,12 +83,10 @@ $user = Piko::get('user');
   </footer>
 
   <?= $this->endBody() ?>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
           crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
+
   <script src="<?= Piko::getAlias('@web/js/site.js') ?>"></script>
 </body>
 </html>

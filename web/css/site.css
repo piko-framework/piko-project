@@ -20,6 +20,8 @@ a {
 	border-top: 1px solid #e9ecef;
 	padding-top: 1rem;
 	font-size: 0.9rem;
+	position: relative;
+	z-index: 10;
 }
 
 .btn {

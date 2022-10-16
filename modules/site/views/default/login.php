@@ -15,19 +15,19 @@ if (!empty($error)) {
 <p>Please fill out the following fields to login:</p>
 
 <form action="" method="post">
-  <div class="form-group row">
+  <div class="row mb-2">
     <label for="loginform-username" class="col-sm-2 col-form-label">Username</label>
     <div class="col-sm-10 col-md-4">
       <input type="text" id="loginform-username" class="form-control" name="username" autofocus required>
     </div>
   </div>
-  <div class="form-group row">
+  <div class="row mb-2">
    <label for="loginform-password" class="col-sm-2 col-form-label">Password</label>
    <div class="col-sm-10 col-md-4">
      <input type="password" id="loginform-password" class="form-control" name="password" value="" required>
    </div>
   </div>
-  <div class="form-group">
+  <div class="mb-4">
     <button type="submit" class="btn btn-primary" name="login-button">Login</button>
   </div>
 </form>
