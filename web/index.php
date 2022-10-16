@@ -1,14 +1,10 @@
 <?php
 use piko\Application;
 
-define('APP_ROOT', dirname(__DIR__));
+require(__DIR__ . '/../vendor/autoload.php');
 
-require(APP_ROOT . '/vendor/autoload.php');
+$_ENV = array_merge($_ENV, require __DIR__ . '/../env.php');
 
-if (file_exists(APP_ROOT . '/env.php')) {
-    $_ENV = array_merge($_ENV, require APP_ROOT . '/env.php');
-}
-
-$config = require APP_ROOT . '/config.php';
+$config = require __DIR__ . '/../config.php';
 
 (new Application($config))->run();
