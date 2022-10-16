@@ -34,6 +34,12 @@ return [
 
 Set `DEBUG = 0` and `APP_ENV = prod` when your project is ready for production.
 
+## Project features
+
+- [Bootstrap 5](https://getbootstrap.com/) integration
+- Simple user authentication
+- Contact form
+
 ## Documentation
 
 [https://piko-framework.github.io/](https://piko-framework.github.io/)
