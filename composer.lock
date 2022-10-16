@@ -61,16 +61,16 @@
         },
         {
             "name": "piko/framework",
-            "version": "v2.0",
+            "version": "v2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/piko.git",
-                "reference": "33bad534bb298de9ea137e052bbd3afb291213b5"
+                "reference": "f860ddf23ea1236f6dfcd0ceef3712eb64819fe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/piko/zipball/33bad534bb298de9ea137e052bbd3afb291213b5",
-                "reference": "33bad534bb298de9ea137e052bbd3afb291213b5",
+                "url": "https://api.github.com/repos/piko-framework/piko/zipball/f860ddf23ea1236f6dfcd0ceef3712eb64819fe7",
+                "reference": "f860ddf23ea1236f6dfcd0ceef3712eb64819fe7",
                 "shasum": ""
             },
             "require": {
@@ -110,22 +110,22 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/piko/issues",
-                "source": "https://github.com/piko-framework/piko/tree/v2.0"
+                "source": "https://github.com/piko-framework/piko/tree/v2.1"
             },
-            "time": "2021-10-15T06:38:19+00:00"
+            "time": "2022-10-12T14:22:53+00:00"
         },
         {
             "name": "piko/router",
-            "version": "v2.1",
+            "version": "v2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/router.git",
-                "reference": "a894bd16c72a6dc88578d0900e5cafe41e6e04cc"
+                "reference": "20df8905616885134b011a4ed0b7edbf9451a137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/router/zipball/a894bd16c72a6dc88578d0900e5cafe41e6e04cc",
-                "reference": "a894bd16c72a6dc88578d0900e5cafe41e6e04cc",
+                "url": "https://api.github.com/repos/piko-framework/router/zipball/20df8905616885134b011a4ed0b7edbf9451a137",
+                "reference": "20df8905616885134b011a4ed0b7edbf9451a137",
                 "shasum": ""
             },
             "require": {
@@ -144,8 +144,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "piko\\": "src",
-                    "bench\\": "benchmark"
+                    "piko\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -168,22 +167,22 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/router/issues",
-                "source": "https://github.com/piko-framework/router/tree/v2.1"
+                "source": "https://github.com/piko-framework/router/tree/v2.2"
             },
-            "time": "2021-10-14T07:00:04+00:00"
+            "time": "2022-10-15T19:32:32+00:00"
         },
         {
             "name": "piko/user",
-            "version": "v1.0",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/user.git",
-                "reference": "4d9116050fbf35bbaebaf18b2e4bdd55253401d1"
+                "reference": "cc9934893f293c80825b38b9deea9a46290a54c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/user/zipball/4d9116050fbf35bbaebaf18b2e4bdd55253401d1",
-                "reference": "4d9116050fbf35bbaebaf18b2e4bdd55253401d1",
+                "url": "https://api.github.com/repos/piko-framework/user/zipball/cc9934893f293c80825b38b9deea9a46290a54c8",
+                "reference": "cc9934893f293c80825b38b9deea9a46290a54c8",
                 "shasum": ""
             },
             "require": {
@@ -223,9 +222,9 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/user/issues",
-                "source": "https://github.com/piko-framework/user/tree/v1.0"
+                "source": "https://github.com/piko-framework/user/tree/v1.1"
             },
-            "time": "2021-09-25T11:23:40+00:00"
+            "time": "2022-10-15T19:45:22+00:00"
         }
     ],
     "packages-dev": [],
@@ -236,5 +235,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
