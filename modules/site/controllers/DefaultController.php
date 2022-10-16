@@ -41,20 +41,18 @@ class DefaultController extends \piko\Controller
     {
         $error = '';
 
-        if (!empty($_POST)) {
+        if ($this->isPost()) {
 
             $userIdentity = User::findByUsername($_POST['username']);
 
-            if ($userIdentity instanceof User) {
-                if ($userIdentity->validatePassword($_POST['password'])) {
-                    $user = Piko::get('user');
-                    $user->login($userIdentity);
-                    return $this->redirect($this->getUrl('site/default/index'));
-                }
-                $error = 'Auhtentication failed';
-            } else {
-                $error = 'Auhtentication failed';
+            if ($userIdentity instanceof User && $userIdentity->validatePassword($_POST['password'])) {
+                $user = Piko::get('user');
+                $user->login($userIdentity);
+
+                return $this->redirect($this->getUrl('site/default/index'));
             }
+
+            $error = 'Auhtentication failed';
         }
 
         return $this->render('login', ['error' => $error]);
