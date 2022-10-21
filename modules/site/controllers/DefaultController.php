@@ -22,7 +22,7 @@ class DefaultController extends \piko\Controller
         $form = new ContactForm();
         $message = '';
 
-        if (!empty($_POST)) {
+        if ($this->isPost()) {
 
             $form->bind($_POST);
 

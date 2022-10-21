@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "piko/core",
-            "version": "v1.1",
+            "version": "v1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/core.git",
-                "reference": "d1abebf80a79fc6ec72375581edaa601c7ea4116"
+                "reference": "77d41ef4730cffad912c04161817d8c4596ac57a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/core/zipball/d1abebf80a79fc6ec72375581edaa601c7ea4116",
-                "reference": "d1abebf80a79fc6ec72375581edaa601c7ea4116",
+                "url": "https://api.github.com/repos/piko-framework/core/zipball/77d41ef4730cffad912c04161817d8c4596ac57a",
+                "reference": "77d41ef4730cffad912c04161817d8c4596ac57a",
                 "shasum": ""
             },
             "require": {
@@ -55,22 +55,22 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/core/issues",
-                "source": "https://github.com/piko-framework/core/tree/v1.1"
+                "source": "https://github.com/piko-framework/core/tree/v1.2"
             },
-            "time": "2021-09-26T13:55:52+00:00"
+            "time": "2022-10-20T23:01:30+00:00"
         },
         {
             "name": "piko/framework",
-            "version": "v2.1",
+            "version": "v2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/piko-framework/piko.git",
-                "reference": "f860ddf23ea1236f6dfcd0ceef3712eb64819fe7"
+                "reference": "80776fc2ea369c34ae34b3f9b6df7b8d9fa9d70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/piko-framework/piko/zipball/f860ddf23ea1236f6dfcd0ceef3712eb64819fe7",
-                "reference": "f860ddf23ea1236f6dfcd0ceef3712eb64819fe7",
+                "url": "https://api.github.com/repos/piko-framework/piko/zipball/80776fc2ea369c34ae34b3f9b6df7b8d9fa9d70a",
+                "reference": "80776fc2ea369c34ae34b3f9b6df7b8d9fa9d70a",
                 "shasum": ""
             },
             "require": {
@@ -110,9 +110,9 @@
             ],
             "support": {
                 "issues": "https://github.com/piko-framework/piko/issues",
-                "source": "https://github.com/piko-framework/piko/tree/v2.1"
+                "source": "https://github.com/piko-framework/piko/tree/v2.2"
             },
-            "time": "2022-10-12T14:22:53+00:00"
+            "time": "2022-10-20T23:22:58+00:00"
         },
         {
             "name": "piko/router",

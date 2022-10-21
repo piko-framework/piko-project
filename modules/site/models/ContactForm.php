@@ -1,11 +1,15 @@
 <?php
 namespace app\modules\site\models;
 
+use piko\ModelTrait;
+
 /**
  * This is the model class for the contact form.
  */
-class ContactForm extends \piko\Model
+class ContactForm
 {
+    use ModelTrait;
+
     public $name = '';
     public $email = '';
     public $subject = '';

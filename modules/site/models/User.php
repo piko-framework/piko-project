@@ -2,13 +2,13 @@
 namespace app\modules\site\models;
 
 use piko\IdentityInterface;
-use piko\Model;
+use piko\Piko;
 
 /**
  * This is the User identity class.
  *
  */
-class User extends Model implements IdentityInterface
+class User implements IdentityInterface
 {
     public $id;
     public $username;
@@ -35,7 +35,10 @@ class User extends Model implements IdentityInterface
     {
         foreach (self::$users as $user) {
             if ($user['username'] == $username) {
-                return new static($user);
+                $identity = new static();
+                Piko::configureObject($identity, $user);
+
+                return $identity;
             }
         }
 
@@ -53,7 +56,14 @@ class User extends Model implements IdentityInterface
      */
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        if (isset(self::$users[$id])) {
+            $identity = new static();
+            Piko::configureObject($identity, self::$users[$id]);
+
+            return $identity;
+        }
+
+        return null;
     }
 
     public function getId()
