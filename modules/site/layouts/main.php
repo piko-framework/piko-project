@@ -1,20 +1,14 @@
 <?php
-/* @var $this \piko\View */
+/* @var $this \Piko\View */
 /* @var $content string */
+/* @var $user \Piko\User */
 
-use piko\Application;
-use piko\Piko;
-
-$app = Application::getInstance();
-
-/* @var $user \piko\User */
-$user = Piko::get('user');
-
+$user = $this->params['user'];
 ?>
 <!DOCTYPE html>
-  <html lang="<?= $app->language ?>">
+  <html lang="<?= $this->params['language'] ?>">
   <head>
-  <meta charset="<?= $app->charset ?>">
+  <meta charset="<?= $this->charset ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $this->escape($this->title) ?></title>
   <?= $this->head() ?>
@@ -59,8 +53,8 @@ $user = Piko::get('user');
     <?php endif ?>
 
     <?php if (isset($this->params['message']) && is_array($this->params['message'])): ?>
-    <div class="container alert alert-<?= $this->params['message']['type'] ?> alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div class="container alert alert-<?= $this->params['message']['type'] ?> alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       <?= $this->params['message']['content'] ?>
     </div>
     <?php endif ?>

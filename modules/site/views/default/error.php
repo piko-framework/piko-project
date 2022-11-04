@@ -3,11 +3,10 @@
 /* @var $this \piko\View */
 /* @var $exception \Exception */
 
-$message = $exception->getMessage() . ' (#' . $exception->getCode() . ')';
+$message = getenv('APP_ENV') === 'dev' ? $exception->getMessage() . ' (#' . $exception->getCode() . ')' : 'Not found';
 
 $this->title = $message;
 
-$appEnv = $_ENV['APP_ENV'] ?? 'prod';
 ?>
 <div class="site-error">
 
@@ -24,12 +23,12 @@ $appEnv = $_ENV['APP_ENV'] ?? 'prod';
         Please contact us if you think this is a server error. Thank you.
     </p>
 
-    <?php if ($appEnv === 'dev'): ?>
-    <div class="panel panel-info">
-      <div class="panel-heading">Trace:</div>
-        <div class="panel-body">
-          <?= nl2br($exception->getTraceAsString()) ?>
-        </div>
+    <?php if (getenv('APP_ENV') === 'dev'): ?>
+    <div class="card bg-light mb-3">
+      <div class="card-header">Trace:</div>
+      <div class="card-body">
+        <?= nl2br($exception->getTraceAsString()) ?>
       </div>
+    </div>
     <?php endif ?>
 </div>

@@ -1,11 +1,12 @@
 <?php
 namespace app\modules\site\controllers;
 
-use piko\Piko;
+use Piko\User;
 use app\modules\site\models\ContactForm;
-use app\modules\site\models\User;
+use app\modules\site\models\UserIdentity;
+use Throwable;
 
-class DefaultController extends \piko\Controller
+class DefaultController extends \Piko\Controller
 {
     public function indexAction()
     {
@@ -22,9 +23,8 @@ class DefaultController extends \piko\Controller
         $form = new ContactForm();
         $message = '';
 
-        if ($this->isPost()) {
-
-            $form->bind($_POST);
+        if ($this->request->getMethod() == 'POST') {
+            $form->bind($this->request->getParsedBody());
 
             if ($form->isValid() && $form->sendMessage()) {
                 $message = 'Thank you for contacting us. We will respond to you as soon as possible.';
@@ -41,12 +41,12 @@ class DefaultController extends \piko\Controller
     {
         $error = '';
 
-        if ($this->isPost()) {
+        if ($this->request->getMethod() == 'POST') {
+            $post = $this->request->getParsedBody();
+            $userIdentity = UserIdentity::findByUsername($post['username']);
 
-            $userIdentity = User::findByUsername($_POST['username']);
-
-            if ($userIdentity instanceof User && $userIdentity->validatePassword($_POST['password'])) {
-                $user = Piko::get('user');
+            if ($userIdentity instanceof UserIdentity && $userIdentity->validatePassword($post['password'])) {
+                $user = $this->getUser();
                 $user->login($userIdentity);
 
                 return $this->redirect($this->getUrl('site/default/index'));
@@ -60,15 +60,20 @@ class DefaultController extends \piko\Controller
 
     public function logoutAction()
     {
-        $user = Piko::get('user');
+        $user = $this->getUser();
         $user->logout();
         $this->redirect($this->getUrl('site/default/index'));
     }
 
-    public function errorAction()
+    public function errorAction(Throwable $exception)
     {
         return $this->render('error', [
-            'exception' => Piko::get('exception')
+            'exception' => $exception
         ]);
+    }
+
+    private function getUser(): User
+    {
+        return $this->module->getApplication()->getComponent(User::class);
     }
 }

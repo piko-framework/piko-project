@@ -1,7 +1,7 @@
 <?php
 namespace app\modules\site\models;
 
-use piko\ModelTrait;
+use Piko\ModelTrait;
 
 /**
  * This is the model class for the contact form.
@@ -18,22 +18,22 @@ class ContactForm
     protected function validate(): void
     {
         if (empty($this->name)) {
-            $this->errors['name'] = 'Name is required';
+            $this->setError('name', 'Name is required');
         }
 
         if (empty($this->email)) {
-            $this->errors['email'] = 'Email is required';
+            $this->setError('email', 'Email is required');
         }
         elseif (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            $this->errors['email'] = 'Email is invalid';
+            $this->setError('email', 'Email is invalid');
         }
 
         if (empty($this->subject)) {
-            $this->errors['subject'] = 'Subject is required';
+            $this->setError('subject', 'Subject is required');
         }
 
         if (empty($this->message)) {
-            $this->errors['message'] = 'Subject is required';
+            $this->setError('message', 'Message is required');
         }
     }
 
@@ -43,9 +43,7 @@ class ContactForm
                  . 'Email: ' . $this->email . "\n"
                  . 'Message: ' . $this->message . "\n";
 
-        $senderEmail = $_ENV['SITE_EMAIL'] ?? '';
-
-        $ret = mail($senderEmail, $this->subject, $message);
+        $ret = mail(getenv('SITE_EMAIL'), $this->subject, $message);
 
         if ($ret === false) {
             $this->errors['send_message'] = 'Cannot send message';

@@ -1,10 +1,12 @@
 <?php
-use piko\Application;
+use Piko\ModularApplication;
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$_ENV = array_merge($_ENV, require __DIR__ . '/../env.php');
+foreach (require __DIR__ . '/../env.php' as $key => $val) {
+    putenv("{$key}={$val}");
+}
 
-$config = require __DIR__ . '/../config.php';
+$config = require __DIR__ . '/../config/app.php';
 
-(new Application($config))->run();
+(new ModularApplication($config))->run();

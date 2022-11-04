@@ -1,14 +1,14 @@
 <?php
 namespace app\modules\site\models;
 
-use piko\IdentityInterface;
-use piko\Piko;
+use Piko\User\IdentityInterface;
+use Piko;
 
 /**
  * This is the User identity class.
  *
  */
-class User implements IdentityInterface
+class UserIdentity implements IdentityInterface
 {
     public $id;
     public $username;
@@ -29,7 +29,7 @@ class User implements IdentityInterface
 
     /**
      * @param string $username
-     * @return User|NULL
+     * @return UserIdentity|NULL
      */
     public static function findByUsername($username)
     {
@@ -52,7 +52,7 @@ class User implements IdentityInterface
 
     /**
      * @param int $id
-     * @return User|null
+     * @return UserIdentity|null
      */
     public static function findIdentity($id)
     {
